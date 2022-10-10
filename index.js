@@ -10,19 +10,19 @@ var highScorers = [{
 }
 ]
 var kQuestions = [{
-  question: "Is mahindra thar is 7 seater? ",
+  question: "Is mahindra Thar Car is 7 seater? ",
   answer: "No"
 }, {
-  question: "who invented mahindra thar? ",
+  question: "who invented mahindra Thar car? ",
   answer: "Mahindra and mahindra Ltd"
 }, {
-  question: "Does Thar have AC? ",
+  question: "Does Thar Car have AC? ",
   answer: "Yes"
 }, {
-  question: "other name of thar? ",
+  question: "other name of Thar car? ",
   answer: "Himalayancar"
 }, {
-  question: "When was the Thar launched first? ",
+  question: "When was the Thar Car launched first? ",
   answer: "2010"
 }]
 
