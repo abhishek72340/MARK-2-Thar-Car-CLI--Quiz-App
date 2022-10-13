@@ -1,43 +1,45 @@
-var readlineSync = require('readline-sync');
+import readlineSync from "readline-sync";
+import chalk from 'chalk';
 var score = 0;
 var highScorers = [{
-  name: 'Abhishek',
+  name: 'Rishabh',
   score: 5
 },
 {
-  name: 'Abhinandan',
+  name: 'Sheetanshu',
   score: 4
 }
 ]
 var kQuestions = [{
-  question: "Is mahindra Thar Car is 7 seater? ",
+  question: "\nFirst Question -\n Is mahindra Thar Car is 7 seater? ",
   answer: "No"
 }, {
-  question: "who invented mahindra Thar car? ",
+  question: "\nSecond Question -\n Who invented mahindra Thar car? ",
   answer: "Mahindra and mahindra Ltd"
 }, {
-  question: "Does Thar Car have AC? ",
+  question: "\nThird Question -\n Does Thar Car have AC? ",
   answer: "Yes"
 }, {
-  question: "other name of Thar car? ",
+  question: "\nFourth Question -\n Other name of Thar car? ",
   answer: "Himalayancar"
 }, {
-  question: "When was the Thar Car launched first? ",
+  question: "\nFifth Question -\n When was the Thar Car launched first? ",
   answer: "2010"
 }]
 
 function welcomeUser() {
-  var userName = readlineSync.question('please enter your name: ');
-  console.log(`\nHi! ${userName}. Welcome to "Thar Car-CLI Quiz App" quiz`)
+  var userName = readlineSync.question(chalk.bold('please enter your name: '));
+  console.log(chalk.greenBright.bold(`\nHi! ${userName}. Welcome to "Thar Car-CLI Quiz App" quiz`))
+    console.log('---------------------------------');
 }
 
 function playQuiz(question, answer) {
-  var userAnswer = readlineSync.question(question);
+  var userAnswer = readlineSync.question(chalk.cyanBright(question));
   if (userAnswer.toLowerCase() === answer.toLowerCase()) {
     score++;
-    console.log('you are right!');
+    console.log('you are right!🙂');
   } else {
-    console.log('you are wrong! \ncorrect answer is: ' + answer);
+    console.log('you are wrong!😢 \ncorrect answer is: ' + answer);
   }
   console.log('current Score: ', score);
   console.log('---------------------------------');
